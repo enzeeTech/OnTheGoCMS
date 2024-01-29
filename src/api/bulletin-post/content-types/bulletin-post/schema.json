@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bulletin_posts",
+  "info": {
+    "singularName": "bulletin-post",
+    "pluralName": "bulletin-posts",
+    "displayName": "bulletinPost"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
