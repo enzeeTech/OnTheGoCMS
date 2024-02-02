@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bulletin-post",
     "pluralName": "bulletin-posts",
-    "displayName": "bulletinPost"
+    "displayName": "bulletinPost",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,11 +16,18 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Information": {
+      "type": "text"
     }
   }
 }

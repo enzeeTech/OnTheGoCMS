@@ -368,6 +368,7 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
     singularName: 'bulletin-post';
     pluralName: 'bulletin-posts';
     displayName: 'bulletinPost';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -375,6 +376,8 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String;
     image: Attribute.Media;
+    Date: Attribute.Date;
+    Information: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
