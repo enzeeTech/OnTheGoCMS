@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perkhidmatan_options",
+  "info": {
+    "singularName": "perkhidmatan-option",
+    "pluralName": "perkhidmatan-options",
+    "displayName": "PerkhidmatanOption"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
