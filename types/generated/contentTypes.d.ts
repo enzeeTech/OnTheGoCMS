@@ -816,6 +816,81 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
   };
 }
 
+export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
+  collectionName: 'lokasi_selangors';
+  info: {
+    singularName: 'lokasi-selangor';
+    pluralName: 'lokasi-selangors';
+    displayName: 'LokasiSelangor';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OpenTime: Attribute.String;
+    CloseTime: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-selangor.lokasi-selangor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-selangor.lokasi-selangor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
+  extends Schema.CollectionType {
+  collectionName: 'lokasi_wp_kuala_lumpurs';
+  info: {
+    singularName: 'lokasi-wp-kuala-lumpur';
+    pluralName: 'lokasi-wp-kuala-lumpurs';
+    displayName: 'LokasiWPKualaLumpur';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OpenTime: Attribute.String;
+    CloseTime: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPerkhidmatanOptionPerkhidmatanOption
   extends Schema.CollectionType {
   collectionName: 'perkhidmatan_options';
@@ -867,6 +942,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::bulletin-post.bulletin-post': ApiBulletinPostBulletinPost;
+      'api::lokasi-selangor.lokasi-selangor': ApiLokasiSelangorLokasiSelangor;
+      'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur': ApiLokasiWpKualaLumpurLokasiWpKualaLumpur;
       'api::perkhidmatan-option.perkhidmatan-option': ApiPerkhidmatanOptionPerkhidmatanOption;
     }
   }
