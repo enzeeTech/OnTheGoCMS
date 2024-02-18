@@ -798,7 +798,7 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
     Date: Attribute.Date;
     Information: Attribute.Text;
     PostImages: Attribute.Media;
-    NewArticleWebsiteLink: Attribute.String;
+    NewsArticleWebsiteLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
