@@ -928,14 +928,13 @@ export interface ApiLokasiPerlisLokasiPerlis extends Schema.CollectionType {
   };
 }
 
-export interface ApiLokasiPualaPinangLokasiPualaPinang
+export interface ApiLokasiPulauPinangLokasiPulauPinang
   extends Schema.CollectionType {
-  collectionName: 'lokasi_puala_pinangs';
+  collectionName: 'lokasi_pulau_pinangs';
   info: {
-    singularName: 'lokasi-puala-pinang';
-    pluralName: 'lokasi-puala-pinangs';
-    displayName: 'LokasiPualaPinang';
-    description: '';
+    singularName: 'lokasi-pulau-pinang';
+    pluralName: 'lokasi-pulau-pinangs';
+    displayName: 'LokasiPulauPinang';
   };
   options: {
     draftAndPublish: true;
@@ -952,13 +951,13 @@ export interface ApiLokasiPualaPinangLokasiPualaPinang
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::lokasi-puala-pinang.lokasi-puala-pinang',
+      'api::lokasi-pulau-pinang.lokasi-pulau-pinang',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::lokasi-puala-pinang.lokasi-puala-pinang',
+      'api::lokasi-pulau-pinang.lokasi-pulau-pinang',
       'oneToOne',
       'admin::user'
     > &
@@ -1095,7 +1094,7 @@ declare module '@strapi/types' {
       'api::lokasi-kedah.lokasi-kedah': ApiLokasiKedahLokasiKedah;
       'api::lokasi-perak.lokasi-perak': ApiLokasiPerakLokasiPerak;
       'api::lokasi-perlis.lokasi-perlis': ApiLokasiPerlisLokasiPerlis;
-      'api::lokasi-puala-pinang.lokasi-puala-pinang': ApiLokasiPualaPinangLokasiPualaPinang;
+      'api::lokasi-pulau-pinang.lokasi-pulau-pinang': ApiLokasiPulauPinangLokasiPulauPinang;
       'api::lokasi-selangor.lokasi-selangor': ApiLokasiSelangorLokasiSelangor;
       'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur': ApiLokasiWpKualaLumpurLokasiWpKualaLumpur;
       'api::perkhidmatan-option.perkhidmatan-option': ApiPerkhidmatanOptionPerkhidmatanOption;
