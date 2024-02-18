@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "bulletin_posts",
+  "collectionName": "lokasi_puala_pinangs",
   "info": {
-    "singularName": "bulletin-post",
-    "pluralName": "bulletin-posts",
-    "displayName": "bulletinPost",
+    "singularName": "lokasi-puala-pinang",
+    "pluralName": "lokasi-puala-pinangs",
+    "displayName": "LokasiPualaPinang",
     "description": ""
   },
   "options": {
@@ -15,7 +15,7 @@
     "Title": {
       "type": "string"
     },
-    "TileImage": {
+    "BackgroundImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -23,21 +23,24 @@
         "images"
       ]
     },
-    "Date": {
-      "type": "date"
-    },
-    "Information": {
-      "type": "text"
-    },
-    "PostImages": {
+    "Icon": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images"
       ]
     },
-    "NewArticleWebsiteLink": {
+    "Location": {
+      "type": "string"
+    },
+    "PhoneNo": {
+      "type": "string"
+    },
+    "FaxNo": {
+      "type": "string"
+    },
+    "Timing": {
       "type": "string"
     }
   }

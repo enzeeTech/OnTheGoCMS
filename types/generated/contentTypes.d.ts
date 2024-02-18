@@ -798,6 +798,7 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
     Date: Attribute.Date;
     Information: Attribute.Text;
     PostImages: Attribute.Media;
+    NewArticleWebsiteLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -816,12 +817,13 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
   };
 }
 
-export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
-  collectionName: 'lokasi_selangors';
+export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
+  collectionName: 'lokasi_kedahs';
   info: {
-    singularName: 'lokasi-selangor';
-    pluralName: 'lokasi-selangors';
-    displayName: 'LokasiSelangor';
+    singularName: 'lokasi-kedah';
+    pluralName: 'lokasi-kedahs';
+    displayName: 'LokasiKedah';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -833,8 +835,156 @@ export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    OpenTime: Attribute.String;
-    CloseTime: Attribute.String;
+    Timing: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-kedah.lokasi-kedah',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-kedah.lokasi-kedah',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiPerakLokasiPerak extends Schema.CollectionType {
+  collectionName: 'lokasi_peraks';
+  info: {
+    singularName: 'lokasi-perak';
+    pluralName: 'lokasi-peraks';
+    displayName: 'LokasiPerak';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    Timing: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-perak.lokasi-perak',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-perak.lokasi-perak',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiPerlisLokasiPerlis extends Schema.CollectionType {
+  collectionName: 'lokasi_perliss';
+  info: {
+    singularName: 'lokasi-perlis';
+    pluralName: 'lokasi-perliss';
+    displayName: 'LokasiPerlis';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    Timing: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-perlis.lokasi-perlis',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-perlis.lokasi-perlis',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiPualaPinangLokasiPualaPinang
+  extends Schema.CollectionType {
+  collectionName: 'lokasi_puala_pinangs';
+  info: {
+    singularName: 'lokasi-puala-pinang';
+    pluralName: 'lokasi-puala-pinangs';
+    displayName: 'LokasiPualaPinang';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    Timing: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-puala-pinang.lokasi-puala-pinang',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-puala-pinang.lokasi-puala-pinang',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
+  collectionName: 'lokasi_selangors';
+  info: {
+    singularName: 'lokasi-selangor';
+    pluralName: 'lokasi-selangors';
+    displayName: 'LokasiSelangor';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    Timing: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -860,6 +1010,7 @@ export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
     singularName: 'lokasi-wp-kuala-lumpur';
     pluralName: 'lokasi-wp-kuala-lumpurs';
     displayName: 'LokasiWPKualaLumpur';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -871,8 +1022,7 @@ export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    OpenTime: Attribute.String;
-    CloseTime: Attribute.String;
+    Timing: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -942,6 +1092,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::bulletin-post.bulletin-post': ApiBulletinPostBulletinPost;
+      'api::lokasi-kedah.lokasi-kedah': ApiLokasiKedahLokasiKedah;
+      'api::lokasi-perak.lokasi-perak': ApiLokasiPerakLokasiPerak;
+      'api::lokasi-perlis.lokasi-perlis': ApiLokasiPerlisLokasiPerlis;
+      'api::lokasi-puala-pinang.lokasi-puala-pinang': ApiLokasiPualaPinangLokasiPualaPinang;
       'api::lokasi-selangor.lokasi-selangor': ApiLokasiSelangorLokasiSelangor;
       'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur': ApiLokasiWpKualaLumpurLokasiWpKualaLumpur;
       'api::perkhidmatan-option.perkhidmatan-option': ApiPerkhidmatanOptionPerkhidmatanOption;
