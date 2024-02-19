@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "lokasi_peraks",
+  "collectionName": "lokasi_melakas",
   "info": {
-    "singularName": "lokasi-perak",
-    "pluralName": "lokasi-peraks",
-    "displayName": "LokasiPerak",
-    "description": ""
+    "singularName": "lokasi-melaka",
+    "pluralName": "lokasi-melakas",
+    "displayName": "LokasiMelaka"
   },
   "options": {
     "draftAndPublish": true
@@ -16,20 +15,18 @@
       "type": "string"
     },
     "BackgroundImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "Icon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "Location": {
       "type": "string"

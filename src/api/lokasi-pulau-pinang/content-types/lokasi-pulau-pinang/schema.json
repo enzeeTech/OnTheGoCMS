@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lokasi-pulau-pinang",
     "pluralName": "lokasi-pulau-pinangs",
-    "displayName": "LokasiPulauPinang"
+    "displayName": "LokasiPulauPinang",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,18 +16,20 @@
       "type": "string"
     },
     "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Location": {
       "type": "string"
@@ -37,8 +40,8 @@
     "FaxNo": {
       "type": "string"
     },
-    "Timing": {
-      "type": "string"
+    "OperationTime": {
+      "type": "text"
     }
   }
 }

@@ -40,8 +40,8 @@
     "FaxNo": {
       "type": "string"
     },
-    "Timing": {
-      "type": "string"
+    "OperationTime": {
+      "type": "text"
     }
   }
 }

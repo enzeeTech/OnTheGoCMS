@@ -817,6 +817,42 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
   };
 }
 
+export interface ApiLokasiJohorLokasiJohor extends Schema.CollectionType {
+  collectionName: 'lokasi_johors';
+  info: {
+    singularName: 'lokasi-johor';
+    pluralName: 'lokasi-johors';
+    displayName: 'LokasiJohor';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-johor.lokasi-johor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-johor.lokasi-johor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
   collectionName: 'lokasi_kedahs';
   info: {
@@ -835,7 +871,7 @@ export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    Timing: Attribute.String;
+    OperationTime: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -847,6 +883,79 @@ export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::lokasi-kedah.lokasi-kedah',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiMelakaLokasiMelaka extends Schema.CollectionType {
+  collectionName: 'lokasi_melakas';
+  info: {
+    singularName: 'lokasi-melaka';
+    pluralName: 'lokasi-melakas';
+    displayName: 'LokasiMelaka';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-melaka.lokasi-melaka',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-melaka.lokasi-melaka',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiNegeriSembilanLokasiNegeriSembilan
+  extends Schema.CollectionType {
+  collectionName: 'lokasi_negeri_sembilans';
+  info: {
+    singularName: 'lokasi-negeri-sembilan';
+    pluralName: 'lokasi-negeri-sembilans';
+    displayName: 'LokasiNegeriSembilan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-negeri-sembilan.lokasi-negeri-sembilan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-negeri-sembilan.lokasi-negeri-sembilan',
       'oneToOne',
       'admin::user'
     > &
@@ -872,7 +981,7 @@ export interface ApiLokasiPerakLokasiPerak extends Schema.CollectionType {
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    Timing: Attribute.String;
+    OperationTime: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -909,7 +1018,7 @@ export interface ApiLokasiPerlisLokasiPerlis extends Schema.CollectionType {
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    Timing: Attribute.String;
+    OperationTime: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -935,6 +1044,7 @@ export interface ApiLokasiPulauPinangLokasiPulauPinang
     singularName: 'lokasi-pulau-pinang';
     pluralName: 'lokasi-pulau-pinangs';
     displayName: 'LokasiPulauPinang';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -946,7 +1056,7 @@ export interface ApiLokasiPulauPinangLokasiPulauPinang
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    Timing: Attribute.String;
+    OperationTime: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -983,7 +1093,7 @@ export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    Timing: Attribute.String;
+    OperationTime: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1021,7 +1131,7 @@ export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
     Location: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
-    Timing: Attribute.String;
+    OperationTime: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1091,7 +1201,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::bulletin-post.bulletin-post': ApiBulletinPostBulletinPost;
+      'api::lokasi-johor.lokasi-johor': ApiLokasiJohorLokasiJohor;
       'api::lokasi-kedah.lokasi-kedah': ApiLokasiKedahLokasiKedah;
+      'api::lokasi-melaka.lokasi-melaka': ApiLokasiMelakaLokasiMelaka;
+      'api::lokasi-negeri-sembilan.lokasi-negeri-sembilan': ApiLokasiNegeriSembilanLokasiNegeriSembilan;
       'api::lokasi-perak.lokasi-perak': ApiLokasiPerakLokasiPerak;
       'api::lokasi-perlis.lokasi-perlis': ApiLokasiPerlisLokasiPerlis;
       'api::lokasi-pulau-pinang.lokasi-pulau-pinang': ApiLokasiPulauPinangLokasiPulauPinang;
