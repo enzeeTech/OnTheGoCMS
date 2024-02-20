@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lokasi_wp_labuans",
+  "info": {
+    "singularName": "lokasi-wp-labuan",
+    "pluralName": "lokasi-wp-labuans",
+    "displayName": "LokasiWPLabuan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Location": {
+      "type": "string"
+    },
+    "PhoneNo": {
+      "type": "string"
+    },
+    "FaxNo": {
+      "type": "string"
+    },
+    "OperationTime": {
+      "type": "text"
+    }
+  }
+}

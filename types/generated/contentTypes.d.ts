@@ -890,6 +890,42 @@ export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
   };
 }
 
+export interface ApiLokasiKelantanLokasiKelantan extends Schema.CollectionType {
+  collectionName: 'lokasi_kelantans';
+  info: {
+    singularName: 'lokasi-kelantan';
+    pluralName: 'lokasi-kelantans';
+    displayName: 'LokasiKelantan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-kelantan.lokasi-kelantan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-kelantan.lokasi-kelantan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLokasiMelakaLokasiMelaka extends Schema.CollectionType {
   collectionName: 'lokasi_melakas';
   info: {
@@ -956,6 +992,42 @@ export interface ApiLokasiNegeriSembilanLokasiNegeriSembilan
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::lokasi-negeri-sembilan.lokasi-negeri-sembilan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiPahangLokasiPahang extends Schema.CollectionType {
+  collectionName: 'lokasi_pahangs';
+  info: {
+    singularName: 'lokasi-pahang';
+    pluralName: 'lokasi-pahangs';
+    displayName: 'LokasiPahang';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-pahang.lokasi-pahang',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-pahang.lokasi-pahang',
       'oneToOne',
       'admin::user'
     > &
@@ -1075,6 +1147,78 @@ export interface ApiLokasiPulauPinangLokasiPulauPinang
   };
 }
 
+export interface ApiLokasiSabahLokasiSabah extends Schema.CollectionType {
+  collectionName: 'lokasi_sabahs';
+  info: {
+    singularName: 'lokasi-sabah';
+    pluralName: 'lokasi-sabahs';
+    displayName: 'LokasiSabah';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-sabah.lokasi-sabah',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-sabah.lokasi-sabah',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiSarawakLokasiSarawak extends Schema.CollectionType {
+  collectionName: 'lokasi_sarawaks';
+  info: {
+    singularName: 'lokasi-sarawak';
+    pluralName: 'lokasi-sarawaks';
+    displayName: 'LokasiSarawak';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-sarawak.lokasi-sarawak',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-sarawak.lokasi-sarawak',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
   collectionName: 'lokasi_selangors';
   info: {
@@ -1105,6 +1249,43 @@ export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::lokasi-selangor.lokasi-selangor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiTerengganuLokasiTerengganu
+  extends Schema.CollectionType {
+  collectionName: 'lokasi_terengganus';
+  info: {
+    singularName: 'lokasi-terengganu';
+    pluralName: 'lokasi-terengganus';
+    displayName: 'LokasiTerengganu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-terengganu.lokasi-terengganu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-terengganu.lokasi-terengganu',
       'oneToOne',
       'admin::user'
     > &
@@ -1143,6 +1324,42 @@ export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLokasiWpLabuanLokasiWpLabuan extends Schema.CollectionType {
+  collectionName: 'lokasi_wp_labuans';
+  info: {
+    singularName: 'lokasi-wp-labuan';
+    pluralName: 'lokasi-wp-labuans';
+    displayName: 'LokasiWPLabuan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    BackgroundImage: Attribute.Media;
+    Icon: Attribute.Media;
+    Location: Attribute.String;
+    PhoneNo: Attribute.String;
+    FaxNo: Attribute.String;
+    OperationTime: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::lokasi-wp-labuan.lokasi-wp-labuan',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::lokasi-wp-labuan.lokasi-wp-labuan',
       'oneToOne',
       'admin::user'
     > &
@@ -1203,13 +1420,19 @@ declare module '@strapi/types' {
       'api::bulletin-post.bulletin-post': ApiBulletinPostBulletinPost;
       'api::lokasi-johor.lokasi-johor': ApiLokasiJohorLokasiJohor;
       'api::lokasi-kedah.lokasi-kedah': ApiLokasiKedahLokasiKedah;
+      'api::lokasi-kelantan.lokasi-kelantan': ApiLokasiKelantanLokasiKelantan;
       'api::lokasi-melaka.lokasi-melaka': ApiLokasiMelakaLokasiMelaka;
       'api::lokasi-negeri-sembilan.lokasi-negeri-sembilan': ApiLokasiNegeriSembilanLokasiNegeriSembilan;
+      'api::lokasi-pahang.lokasi-pahang': ApiLokasiPahangLokasiPahang;
       'api::lokasi-perak.lokasi-perak': ApiLokasiPerakLokasiPerak;
       'api::lokasi-perlis.lokasi-perlis': ApiLokasiPerlisLokasiPerlis;
       'api::lokasi-pulau-pinang.lokasi-pulau-pinang': ApiLokasiPulauPinangLokasiPulauPinang;
+      'api::lokasi-sabah.lokasi-sabah': ApiLokasiSabahLokasiSabah;
+      'api::lokasi-sarawak.lokasi-sarawak': ApiLokasiSarawakLokasiSarawak;
       'api::lokasi-selangor.lokasi-selangor': ApiLokasiSelangorLokasiSelangor;
+      'api::lokasi-terengganu.lokasi-terengganu': ApiLokasiTerengganuLokasiTerengganu;
       'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur': ApiLokasiWpKualaLumpurLokasiWpKualaLumpur;
+      'api::lokasi-wp-labuan.lokasi-wp-labuan': ApiLokasiWpLabuanLokasiWpLabuan;
       'api::perkhidmatan-option.perkhidmatan-option': ApiPerkhidmatanOptionPerkhidmatanOption;
     }
   }

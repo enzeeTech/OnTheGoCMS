@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lokasi_terengganus",
+  "info": {
+    "singularName": "lokasi-terengganu",
+    "pluralName": "lokasi-terengganus",
+    "displayName": "LokasiTerengganu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Location": {
+      "type": "string"
+    },
+    "PhoneNo": {
+      "type": "string"
+    },
+    "FaxNo": {
+      "type": "string"
+    },
+    "OperationTime": {
+      "type": "text"
+    }
+  }
+}
