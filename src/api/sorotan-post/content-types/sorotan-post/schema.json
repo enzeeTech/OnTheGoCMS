@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sorotan_posts",
+  "info": {
+    "singularName": "sorotan-post",
+    "pluralName": "sorotan-posts",
+    "displayName": "SorotanPost"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "TileImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Information": {
+      "type": "text"
+    },
+    "PostImages": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "PosterArticleWebsiteLink": {
+      "type": "string"
+    }
+  }
+}

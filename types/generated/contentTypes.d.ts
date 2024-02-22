@@ -1399,6 +1399,41 @@ export interface ApiPerkhidmatanOptionPerkhidmatanOption
   };
 }
 
+export interface ApiSorotanPostSorotanPost extends Schema.CollectionType {
+  collectionName: 'sorotan_posts';
+  info: {
+    singularName: 'sorotan-post';
+    pluralName: 'sorotan-posts';
+    displayName: 'SorotanPost';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    TileImage: Attribute.Media;
+    Date: Attribute.Date;
+    Information: Attribute.Text;
+    PostImages: Attribute.Media;
+    PosterArticleWebsiteLink: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sorotan-post.sorotan-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sorotan-post.sorotan-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1434,6 +1469,7 @@ declare module '@strapi/types' {
       'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur': ApiLokasiWpKualaLumpurLokasiWpKualaLumpur;
       'api::lokasi-wp-labuan.lokasi-wp-labuan': ApiLokasiWpLabuanLokasiWpLabuan;
       'api::perkhidmatan-option.perkhidmatan-option': ApiPerkhidmatanOptionPerkhidmatanOption;
+      'api::sorotan-post.sorotan-post': ApiSorotanPostSorotanPost;
     }
   }
 }
