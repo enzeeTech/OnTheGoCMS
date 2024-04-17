@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aduan_forms",
+  "info": {
+    "singularName": "aduan-form",
+    "pluralName": "aduan-forms",
+    "displayName": "AduanForm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jenis_aduan": {
+      "type": "string"
+    },
+    "tarikh_kejadian": {
+      "type": "string"
+    },
+    "masa_kejadian": {
+      "type": "string"
+    },
+    "tajuk_aduan": {
+      "type": "string"
+    },
+    "butiran_lanjut": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "negeri": {
+      "type": "string"
+    },
+    "lokasi": {
+      "type": "string"
+    },
+    "no_tel_yang_gagal_dihubungi": {
+      "type": "string"
+    },
+    "nama_staff_bertugas": {
+      "type": "string"
+    },
+    "nama_penuh_pasangan": {
+      "type": "string"
+    },
+    "no_kad_pasangan": {
+      "type": "string"
+    },
+    "nama_penuh": {
+      "type": "string"
+    },
+    "no_kad_pengenalan": {
+      "type": "string"
+    },
+    "no_telefon": {
+      "type": "string"
+    },
+    "e_mel": {
+      "type": "string"
+    },
+    "jantina": {
+      "type": "string"
+    }
+  }
+}

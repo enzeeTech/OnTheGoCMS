@@ -781,6 +781,53 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAduanFormAduanForm extends Schema.CollectionType {
+  collectionName: 'aduan_forms';
+  info: {
+    singularName: 'aduan-form';
+    pluralName: 'aduan-forms';
+    displayName: 'AduanForm';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    jenis_aduan: Attribute.String;
+    tarikh_kejadian: Attribute.String;
+    masa_kejadian: Attribute.String;
+    tajuk_aduan: Attribute.String;
+    butiran_lanjut: Attribute.String;
+    documents: Attribute.Media;
+    negeri: Attribute.String;
+    lokasi: Attribute.String;
+    no_tel_yang_gagal_dihubungi: Attribute.String;
+    nama_staff_bertugas: Attribute.String;
+    nama_penuh_pasangan: Attribute.String;
+    no_kad_pasangan: Attribute.String;
+    nama_penuh: Attribute.String;
+    no_kad_pengenalan: Attribute.String;
+    no_telefon: Attribute.String;
+    e_mel: Attribute.String;
+    jantina: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aduan-form.aduan-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aduan-form.aduan-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
   collectionName: 'bulletin_posts';
   info: {
@@ -810,6 +857,39 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::bulletin-post.bulletin-post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomeScreenMediaLibraryHomeScreenMediaLibrary
+  extends Schema.CollectionType {
+  collectionName: 'home_screen_media_libraries';
+  info: {
+    singularName: 'home-screen-media-library';
+    pluralName: 'home-screen-media-libraries';
+    displayName: 'HomeScreenMediaLibrary';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Subtitle: Attribute.String;
+    Content: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-screen-media-library.home-screen-media-library',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-screen-media-library.home-screen-media-library',
       'oneToOne',
       'admin::user'
     > &
@@ -1452,7 +1532,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::aduan-form.aduan-form': ApiAduanFormAduanForm;
       'api::bulletin-post.bulletin-post': ApiBulletinPostBulletinPost;
+      'api::home-screen-media-library.home-screen-media-library': ApiHomeScreenMediaLibraryHomeScreenMediaLibrary;
       'api::lokasi-johor.lokasi-johor': ApiLokasiJohorLokasiJohor;
       'api::lokasi-kedah.lokasi-kedah': ApiLokasiKedahLokasiKedah;
       'api::lokasi-kelantan.lokasi-kelantan': ApiLokasiKelantanLokasiKelantan;

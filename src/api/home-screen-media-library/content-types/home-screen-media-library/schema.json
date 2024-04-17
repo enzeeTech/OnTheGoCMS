@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_screen_media_libraries",
+  "info": {
+    "singularName": "home-screen-media-library",
+    "pluralName": "home-screen-media-libraries",
+    "displayName": "HomeScreenMediaLibrary"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Content": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
