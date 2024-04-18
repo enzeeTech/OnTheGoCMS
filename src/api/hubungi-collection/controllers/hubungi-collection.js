@@ -7,22 +7,25 @@
 module.exports = {
   async search(ctx) {
     try {
-      const { keyword } = ctx.request.query;
-      console.log('Keyword received:', keyword);  // Check if keyword is being received correctly
-  
-      if (!keyword) {
-        return ctx.badRequest('Keyword query parameter is required');
+      // Retrieve both keywords from the query parameters
+      const { keyword, locationKeyword } = ctx.request.query;
+      console.log('Keyword received:', keyword);
+      console.log('Location Keyword received:', locationKeyword); // Log the location keyword
+
+      // Check if both keywords are provided
+      if (!keyword || !locationKeyword) {
+        return ctx.badRequest('Both keyword and locationKeyword query parameters are required');
       }
-  
-      console.log('Performing search...');  // Confirm that the service function is being called
-      const results = await strapi.service('api::hubungi-collection.hubungi-collection').search(keyword);
-      console.log('Search results:', results);  // Check what the search function is returning
-  
+
+      console.log('Performing search...');
+      // Pass both keywords to the service function
+      const results = await strapi.service('api::hubungi-collection.hubungi-collection').search(keyword, locationKeyword);
+      console.log('Search results:', results);
+
       ctx.body = results;
     } catch (error) {
-      console.error('Error in search controller:', error);  // This will log the error details
+      console.error('Error in search controller:', error);
       ctx.internalServerError('Internal server error');
     }
   }
-  
 };

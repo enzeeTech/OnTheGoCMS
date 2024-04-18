@@ -5,7 +5,7 @@
  */
 
 module.exports = () => ({
-    async search(keyword) {
+    async search(keyword, locationKeyword) {
         const queryPromises = [];
         const collections = ['lokasi-johor', 'lokasi-kedah', 'lokasi-kelantan', 'lokasi-melaka', 'lokasi-negeri-sembilan', 'lokasi-pahang', 'lokasi-perak', 'lokasi-perlis', 'lokasi-pulau-pinang', 'lokasi-sabah', 'lokasi-sarawak', 'lokasi-selangor', 'lokasi-terengganu', 'lokasi-wp-kuala-lumpur', 'lokasi-wp-labuan'];  
     
@@ -15,9 +15,12 @@ module.exports = () => ({
               where: {
                 title: {
                   $containsi: keyword  
+                },
+                location: {
+                  $containsi: locationKeyword
                 }
               },
-              populate: ['BackgroundImage']
+              populate: ['BackgroundImage', 'Icon']
             })
           );
         });
