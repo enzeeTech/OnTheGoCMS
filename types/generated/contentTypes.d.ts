@@ -1167,10 +1167,11 @@ export interface ApiLokasiPerlisLokasiPerlis extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
