@@ -31,7 +31,7 @@
         "images"
       ]
     },
-    "Location": {
+    "LocationAddress": {
       "type": "string"
     },
     "PhoneNo": {
@@ -42,6 +42,9 @@
     },
     "OperationTime": {
       "type": "text"
+    },
+    "LocationURL": {
+      "type": "string"
     }
   }
 }

@@ -903,6 +903,7 @@ export interface ApiLokasiJohorLokasiJohor extends Schema.CollectionType {
     singularName: 'lokasi-johor';
     pluralName: 'lokasi-johors';
     displayName: 'LokasiJohor';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -911,10 +912,11 @@ export interface ApiLokasiJohorLokasiJohor extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -948,10 +950,11 @@ export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -976,6 +979,7 @@ export interface ApiLokasiKelantanLokasiKelantan extends Schema.CollectionType {
     singularName: 'lokasi-kelantan';
     pluralName: 'lokasi-kelantans';
     displayName: 'LokasiKelantan';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -984,10 +988,11 @@ export interface ApiLokasiKelantanLokasiKelantan extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1012,6 +1017,7 @@ export interface ApiLokasiMelakaLokasiMelaka extends Schema.CollectionType {
     singularName: 'lokasi-melaka';
     pluralName: 'lokasi-melakas';
     displayName: 'LokasiMelaka';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1020,10 +1026,11 @@ export interface ApiLokasiMelakaLokasiMelaka extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1049,6 +1056,7 @@ export interface ApiLokasiNegeriSembilanLokasiNegeriSembilan
     singularName: 'lokasi-negeri-sembilan';
     pluralName: 'lokasi-negeri-sembilans';
     displayName: 'LokasiNegeriSembilan';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1057,10 +1065,11 @@ export interface ApiLokasiNegeriSembilanLokasiNegeriSembilan
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1085,6 +1094,7 @@ export interface ApiLokasiPahangLokasiPahang extends Schema.CollectionType {
     singularName: 'lokasi-pahang';
     pluralName: 'lokasi-pahangs';
     displayName: 'LokasiPahang';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1093,10 +1103,11 @@ export interface ApiLokasiPahangLokasiPahang extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1130,10 +1141,11 @@ export interface ApiLokasiPerakLokasiPerak extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1206,10 +1218,11 @@ export interface ApiLokasiPulauPinangLokasiPulauPinang
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1234,6 +1247,7 @@ export interface ApiLokasiSabahLokasiSabah extends Schema.CollectionType {
     singularName: 'lokasi-sabah';
     pluralName: 'lokasi-sabahs';
     displayName: 'LokasiSabah';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1242,10 +1256,11 @@ export interface ApiLokasiSabahLokasiSabah extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1270,6 +1285,7 @@ export interface ApiLokasiSarawakLokasiSarawak extends Schema.CollectionType {
     singularName: 'lokasi-sarawak';
     pluralName: 'lokasi-sarawaks';
     displayName: 'LokasiSarawak';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1278,10 +1294,11 @@ export interface ApiLokasiSarawakLokasiSarawak extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1315,10 +1332,11 @@ export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1344,6 +1362,7 @@ export interface ApiLokasiTerengganuLokasiTerengganu
     singularName: 'lokasi-terengganu';
     pluralName: 'lokasi-terengganus';
     displayName: 'LokasiTerengganu';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1352,10 +1371,11 @@ export interface ApiLokasiTerengganuLokasiTerengganu
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1390,10 +1410,11 @@ export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1418,6 +1439,7 @@ export interface ApiLokasiWpLabuanLokasiWpLabuan extends Schema.CollectionType {
     singularName: 'lokasi-wp-labuan';
     pluralName: 'lokasi-wp-labuans';
     displayName: 'LokasiWPLabuan';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1426,10 +1448,11 @@ export interface ApiLokasiWpLabuanLokasiWpLabuan extends Schema.CollectionType {
     Title: Attribute.String;
     BackgroundImage: Attribute.Media;
     Icon: Attribute.Media;
-    Location: Attribute.String;
+    LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
     OperationTime: Attribute.Text;
+    LocationURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
