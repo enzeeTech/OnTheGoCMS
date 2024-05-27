@@ -16,7 +16,7 @@ module.exports = () => ({
                 title: {
                   $containsi: keyword  
                 },
-                location: {
+                locationAddress: {
                   $containsi: locationKeyword
                 }
               },
