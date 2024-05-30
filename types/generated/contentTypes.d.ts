@@ -1471,31 +1471,35 @@ export interface ApiLokasiWpLabuanLokasiWpLabuan extends Schema.CollectionType {
   };
 }
 
-export interface ApiPerkhidmatanOptionPerkhidmatanOption
-  extends Schema.CollectionType {
-  collectionName: 'perkhidmatan_options';
+export interface ApiPerkhidmatanPerkhidmatan extends Schema.CollectionType {
+  collectionName: 'perkhidmatans';
   info: {
-    singularName: 'perkhidmatan-option';
-    pluralName: 'perkhidmatan-options';
-    displayName: 'PerkhidmatanOption';
+    singularName: 'perkhidmatan';
+    pluralName: 'perkhidmatans';
+    displayName: 'Perkhidmatan';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Title: Attribute.String;
-    Icon: Attribute.Media;
+    Description: Attribute.Text;
+    ServiceImage: Attribute.Media;
+    Content: Attribute.DynamicZone<
+      ['lists.green-tick-list-box', 'gallery.gallery-basic']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::perkhidmatan-option.perkhidmatan-option',
+      'api::perkhidmatan.perkhidmatan',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::perkhidmatan-option.perkhidmatan-option',
+      'api::perkhidmatan.perkhidmatan',
       'oneToOne',
       'admin::user'
     > &
@@ -1574,7 +1578,7 @@ declare module '@strapi/types' {
       'api::lokasi-terengganu.lokasi-terengganu': ApiLokasiTerengganuLokasiTerengganu;
       'api::lokasi-wp-kuala-lumpur.lokasi-wp-kuala-lumpur': ApiLokasiWpKualaLumpurLokasiWpKualaLumpur;
       'api::lokasi-wp-labuan.lokasi-wp-labuan': ApiLokasiWpLabuanLokasiWpLabuan;
-      'api::perkhidmatan-option.perkhidmatan-option': ApiPerkhidmatanOptionPerkhidmatanOption;
+      'api::perkhidmatan.perkhidmatan': ApiPerkhidmatanPerkhidmatan;
       'api::sorotan-post.sorotan-post': ApiSorotanPostSorotanPost;
     }
   }

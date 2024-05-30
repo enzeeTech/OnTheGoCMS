@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_lists_green_tick_list_boxes",
+  "info": {
+    "displayName": "GreenTickListBox"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "BulletPoints": {
+      "type": "text"
+    }
+  }
+}

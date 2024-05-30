@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_gallery_gallery_basics",
+  "info": {
+    "displayName": "GalleryBasic"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

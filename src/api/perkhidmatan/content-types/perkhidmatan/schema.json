@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perkhidmatans",
+  "info": {
+    "singularName": "perkhidmatan",
+    "pluralName": "perkhidmatans",
+    "displayName": "Perkhidmatan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ServiceImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "lists.green-tick-list-box",
+        "gallery.gallery-basic"
+      ]
+    }
+  }
+}
