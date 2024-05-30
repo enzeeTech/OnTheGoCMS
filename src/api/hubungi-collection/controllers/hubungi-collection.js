@@ -7,19 +7,18 @@
 module.exports = {
   async search(ctx) {
     try {
-      // Retrieve both keywords from the query parameters
-      const { keyword, locationKeyword } = ctx.request.query;
+      // Retrieve keywords and fetchAll parameter from the query parameters
+      const { keyword, locationKeyword, fetchAll } = ctx.request.query;
       console.log('Keyword received:', keyword);
       console.log('Location Keyword received:', locationKeyword); // Log the location keyword
+      console.log('Fetch All parameter received:', fetchAll); // Log the fetchAll parameter
 
-      // Check if both keywords are provided
-      if (!keyword || !locationKeyword) {
-        return ctx.badRequest('Both keyword and locationKeyword query parameters are required');
-      }
+      // Convert fetchAll to a boolean value
+      const fetchAllBool = fetchAll === 'true';
 
       console.log('Performing search...');
-      // Pass both keywords to the service function
-      const results = await strapi.service('api::hubungi-collection.hubungi-collection').search(keyword, locationKeyword);
+      // Pass keywords and fetchAll parameter to the service function
+      const results = await strapi.service('api::hubungi-collection.hubungi-collection').search(keyword, locationKeyword, fetchAllBool);
       console.log('Search results:', results);
 
       ctx.body = results;
