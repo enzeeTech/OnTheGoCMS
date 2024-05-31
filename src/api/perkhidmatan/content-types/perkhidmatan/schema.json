@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "ServiceID": {
       "type": "string"
     },
     "Description": {
@@ -32,6 +32,9 @@
         "lists.green-tick-list-box",
         "gallery.gallery-basic"
       ]
+    },
+    "ServiceTitle": {
+      "type": "string"
     }
   }
 }
