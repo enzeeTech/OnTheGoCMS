@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_lists_bullet_point_lists",
+  "info": {
+    "displayName": "BulletPointList"
+  },
+  "options": {},
+  "attributes": {
+    "BulletPoints": {
+      "type": "json"
+    }
+  }
+}

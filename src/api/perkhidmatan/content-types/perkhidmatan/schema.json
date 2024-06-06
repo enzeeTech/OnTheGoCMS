@@ -30,7 +30,10 @@
       "type": "dynamiczone",
       "components": [
         "lists.green-tick-list-box",
-        "gallery.gallery-basic"
+        "gallery.gallery-basic",
+        "lists.bullet-point-list",
+        "subsections.section",
+        "tiles.price-tile1"
       ]
     },
     "ServiceTitle": {

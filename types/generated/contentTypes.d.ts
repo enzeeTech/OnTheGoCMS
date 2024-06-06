@@ -1487,7 +1487,13 @@ export interface ApiPerkhidmatanPerkhidmatan extends Schema.CollectionType {
     Description: Attribute.Text;
     ServiceImage: Attribute.Media;
     Content: Attribute.DynamicZone<
-      ['lists.green-tick-list-box', 'gallery.gallery-basic']
+      [
+        'lists.green-tick-list-box',
+        'gallery.gallery-basic',
+        'lists.bullet-point-list',
+        'subsections.section',
+        'tiles.price-tile1'
+      ]
     >;
     ServiceTitle: Attribute.String;
     createdAt: Attribute.DateTime;
