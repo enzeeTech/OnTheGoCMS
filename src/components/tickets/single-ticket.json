@@ -1,12 +1,18 @@
 {
   "collectionName": "components_tickets_single_tickets",
   "info": {
-    "displayName": "Single Ticket"
+    "displayName": "Single Ticket",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "TicketData": {
-      "type": "json"
+    "TicketImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
     }
   }
 }

@@ -91,9 +91,11 @@ export interface TicketsDoubleTicket extends Schema.Component {
   collectionName: 'components_tickets_double_tickets';
   info: {
     displayName: 'DoubleTicket';
+    description: '';
   };
   attributes: {
-    TicketData: Attribute.JSON;
+    Ticket1: Attribute.Media;
+    Ticket2: Attribute.Media;
   };
 }
 
@@ -101,9 +103,10 @@ export interface TicketsSingleTicket extends Schema.Component {
   collectionName: 'components_tickets_single_tickets';
   info: {
     displayName: 'Single Ticket';
+    description: '';
   };
   attributes: {
-    TicketData: Attribute.JSON;
+    TicketImage: Attribute.Media;
   };
 }
 

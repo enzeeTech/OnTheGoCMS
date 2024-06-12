@@ -1,12 +1,24 @@
 {
   "collectionName": "components_tickets_double_tickets",
   "info": {
-    "displayName": "DoubleTicket"
+    "displayName": "DoubleTicket",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "TicketData": {
-      "type": "json"
+    "Ticket1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Ticket2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
