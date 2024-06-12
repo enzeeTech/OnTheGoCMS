@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_tickets_single_tickets",
+  "info": {
+    "displayName": "Single Ticket"
+  },
+  "options": {},
+  "attributes": {
+    "TicketData": {
+      "type": "json"
+    }
+  }
+}

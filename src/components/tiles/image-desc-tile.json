@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_tiles_image_desc_tiles",
+  "info": {
+    "displayName": "ImageDescTile"
+  },
+  "options": {},
+  "attributes": {
+    "TileData": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_tickets_double_tickets",
+  "info": {
+    "displayName": "DoubleTicket"
+  },
+  "options": {},
+  "attributes": {
+    "TicketData": {
+      "type": "json"
+    }
+  }
+}

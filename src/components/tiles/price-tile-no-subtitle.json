@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_tiles_price_tile_no_subtitles",
+  "info": {
+    "displayName": "PriceTileNoSubtitle"
+  },
+  "options": {},
+  "attributes": {
+    "TileData": {
+      "type": "json"
+    }
+  }
+}
