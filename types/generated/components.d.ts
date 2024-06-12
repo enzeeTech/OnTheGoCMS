@@ -1,5 +1,15 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface DropdownDropdownNormal extends Schema.Component {
+  collectionName: 'components_dropdown_dropdown_normals';
+  info: {
+    displayName: 'DropdownNormal';
+  };
+  attributes: {
+    DropdownData: Attribute.JSON;
+  };
+}
+
 export interface GalleryGalleryBasic extends Schema.Component {
   collectionName: 'components_gallery_gallery_basics';
   info: {
@@ -8,6 +18,40 @@ export interface GalleryGalleryBasic extends Schema.Component {
   attributes: {
     Title: Attribute.String;
     Images: Attribute.Media;
+  };
+}
+
+export interface GalleryGallerySmall extends Schema.Component {
+  collectionName: 'components_gallery_gallery_smalls';
+  info: {
+    displayName: 'GallerySmall';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Images: Attribute.Media;
+  };
+}
+
+export interface GalleryGalleryWithDescription extends Schema.Component {
+  collectionName: 'components_gallery_gallery_with_descriptions';
+  info: {
+    displayName: 'GalleryWithDescription';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    GalleryData: Attribute.JSON;
+  };
+}
+
+export interface LinksLink1 extends Schema.Component {
+  collectionName: 'components_links_link1s';
+  info: {
+    displayName: 'Link1';
+  };
+  attributes: {
+    Title: Attribute.String;
+    URL: Attribute.String;
   };
 }
 
@@ -73,16 +117,6 @@ export interface TilesImageDescTile extends Schema.Component {
   };
 }
 
-export interface TilesPriceTileNoSubtitle extends Schema.Component {
-  collectionName: 'components_tiles_price_tile_no_subtitles';
-  info: {
-    displayName: 'PriceTileNoSubtitle';
-  };
-  attributes: {
-    TileData: Attribute.JSON;
-  };
-}
-
 export interface TilesPriceTile1 extends Schema.Component {
   collectionName: 'components_tiles_price_tile1s';
   info: {
@@ -96,14 +130,17 @@ export interface TilesPriceTile1 extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'dropdown.dropdown-normal': DropdownDropdownNormal;
       'gallery.gallery-basic': GalleryGalleryBasic;
+      'gallery.gallery-small': GalleryGallerySmall;
+      'gallery.gallery-with-description': GalleryGalleryWithDescription;
+      'links.link1': LinksLink1;
       'lists.bullet-point-list': ListsBulletPointList;
       'lists.green-tick-list-box': ListsGreenTickListBox;
       'subsections.section': SubsectionsSection;
       'tickets.double-ticket': TicketsDoubleTicket;
       'tickets.single-ticket': TicketsSingleTicket;
       'tiles.image-desc-tile': TilesImageDescTile;
-      'tiles.price-tile-no-subtitle': TilesPriceTileNoSubtitle;
       'tiles.price-tile1': TilesPriceTile1;
     }
   }

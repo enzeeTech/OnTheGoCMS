@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_gallery_gallery_smalls",
+  "info": {
+    "displayName": "GallerySmall"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

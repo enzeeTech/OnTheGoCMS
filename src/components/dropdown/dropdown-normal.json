@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_dropdown_dropdown_normals",
+  "info": {
+    "displayName": "DropdownNormal"
+  },
+  "options": {},
+  "attributes": {
+    "DropdownData": {
+      "type": "json"
+    }
+  }
+}
