@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_tiles_image_price_tiles",
+  "info": {
+    "displayName": "ImagePriceTile"
+  },
+  "options": {},
+  "attributes": {
+    "TileData": {
+      "type": "json"
+    }
+  }
+}

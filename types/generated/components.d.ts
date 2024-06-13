@@ -141,6 +141,16 @@ export interface TilesImageDescTile extends Schema.Component {
   };
 }
 
+export interface TilesImagePriceTile extends Schema.Component {
+  collectionName: 'components_tiles_image_price_tiles';
+  info: {
+    displayName: 'ImagePriceTile';
+  };
+  attributes: {
+    TileData: Attribute.JSON;
+  };
+}
+
 export interface TilesPriceTile1 extends Schema.Component {
   collectionName: 'components_tiles_price_tile1s';
   info: {
@@ -167,6 +177,7 @@ declare module '@strapi/types' {
       'tickets.double-ticket': TicketsDoubleTicket;
       'tickets.single-ticket': TicketsSingleTicket;
       'tiles.image-desc-tile': TilesImageDescTile;
+      'tiles.image-price-tile': TilesImagePriceTile;
       'tiles.price-tile1': TilesPriceTile1;
     }
   }

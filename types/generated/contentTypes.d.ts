@@ -1501,7 +1501,8 @@ export interface ApiPerkhidmatanPerkhidmatan extends Schema.CollectionType {
         'tickets.double-ticket',
         'tickets.single-ticket',
         'dropdown.plain-text-dropdown',
-        'subsections.section-with-image'
+        'subsections.section-with-image',
+        'tiles.image-price-tile'
       ]
     >;
     ServiceTitle: Attribute.String;
