@@ -1499,7 +1499,9 @@ export interface ApiPerkhidmatanPerkhidmatan extends Schema.CollectionType {
         'gallery.gallery-with-description',
         'links.link1',
         'tickets.double-ticket',
-        'tickets.single-ticket'
+        'tickets.single-ticket',
+        'dropdown.plain-text-dropdown',
+        'subsections.section-with-image'
       ]
     >;
     ServiceTitle: Attribute.String;

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_dropdown_plain_text_dropdowns",
+  "info": {
+    "displayName": "PlainTextDropdown"
+  },
+  "options": {},
+  "attributes": {
+    "DropdownData": {
+      "type": "json"
+    }
+  }
+}

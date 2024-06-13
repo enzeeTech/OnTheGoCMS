@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_subsections_section_with_images",
+  "info": {
+    "displayName": "SectionWithImage"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

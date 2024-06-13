@@ -10,6 +10,16 @@ export interface DropdownDropdownNormal extends Schema.Component {
   };
 }
 
+export interface DropdownPlainTextDropdown extends Schema.Component {
+  collectionName: 'components_dropdown_plain_text_dropdowns';
+  info: {
+    displayName: 'PlainTextDropdown';
+  };
+  attributes: {
+    DropdownData: Attribute.JSON;
+  };
+}
+
 export interface GalleryGalleryBasic extends Schema.Component {
   collectionName: 'components_gallery_gallery_basics';
   info: {
@@ -76,6 +86,17 @@ export interface ListsGreenTickListBox extends Schema.Component {
   };
 }
 
+export interface SubsectionsSectionWithImage extends Schema.Component {
+  collectionName: 'components_subsections_section_with_images';
+  info: {
+    displayName: 'SectionWithImage';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Image: Attribute.Media;
+  };
+}
+
 export interface SubsectionsSection extends Schema.Component {
   collectionName: 'components_subsections_sections';
   info: {
@@ -134,12 +155,14 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'dropdown.dropdown-normal': DropdownDropdownNormal;
+      'dropdown.plain-text-dropdown': DropdownPlainTextDropdown;
       'gallery.gallery-basic': GalleryGalleryBasic;
       'gallery.gallery-small': GalleryGallerySmall;
       'gallery.gallery-with-description': GalleryGalleryWithDescription;
       'links.link1': LinksLink1;
       'lists.bullet-point-list': ListsBulletPointList;
       'lists.green-tick-list-box': ListsGreenTickListBox;
+      'subsections.section-with-image': SubsectionsSectionWithImage;
       'subsections.section': SubsectionsSection;
       'tickets.double-ticket': TicketsDoubleTicket;
       'tickets.single-ticket': TicketsSingleTicket;
