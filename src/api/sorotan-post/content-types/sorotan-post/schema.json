@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sorotan-post",
     "pluralName": "sorotan-posts",
-    "displayName": "SorotanPost"
+    "displayName": "SorotanPost",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,11 +16,12 @@
       "type": "string"
     },
     "TileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Date": {
       "type": "date"
@@ -28,14 +30,18 @@
       "type": "text"
     },
     "PostImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "PosterArticleWebsiteLink": {
       "type": "string"
+    },
+    "PinPost": {
+      "type": "boolean"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-screen-media-library",
     "pluralName": "home-screen-media-libraries",
-    "displayName": "HomeScreenMediaLibrary"
+    "displayName": "HomeScreenMediaLibrary",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,12 +19,16 @@
       "type": "string"
     },
     "Content": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Link": {
+      "type": "string"
     }
   }
 }

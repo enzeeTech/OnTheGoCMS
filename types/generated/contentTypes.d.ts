@@ -871,6 +871,7 @@ export interface ApiHomeScreenMediaLibraryHomeScreenMediaLibrary
     singularName: 'home-screen-media-library';
     pluralName: 'home-screen-media-libraries';
     displayName: 'HomeScreenMediaLibrary';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -879,6 +880,7 @@ export interface ApiHomeScreenMediaLibraryHomeScreenMediaLibrary
     Title: Attribute.String;
     Subtitle: Attribute.String;
     Content: Attribute.Media;
+    Link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1530,6 +1532,7 @@ export interface ApiSorotanPostSorotanPost extends Schema.CollectionType {
     singularName: 'sorotan-post';
     pluralName: 'sorotan-posts';
     displayName: 'SorotanPost';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1541,6 +1544,7 @@ export interface ApiSorotanPostSorotanPost extends Schema.CollectionType {
     Information: Attribute.Text;
     PostImages: Attribute.Media;
     PosterArticleWebsiteLink: Attribute.String;
+    PinPost: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
