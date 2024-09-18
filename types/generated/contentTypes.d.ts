@@ -512,6 +512,12 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     releasedAt: Attribute.DateTime;
+    scheduledAt: Attribute.DateTime;
+    timezone: Attribute.String;
+    status: Attribute.Enumeration<
+      ['ready', 'blocked', 'failed', 'done', 'empty']
+    > &
+      Attribute.Required;
     actions: Attribute.Relation<
       'plugin::content-releases.release',
       'oneToMany',
@@ -566,6 +572,7 @@ export interface PluginContentReleasesReleaseAction
       'manyToOne',
       'plugin::content-releases.release'
     >;
+    isEntryValid: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -798,7 +805,7 @@ export interface ApiAduanFormAduanForm extends Schema.CollectionType {
     masa_kejadian: Attribute.String;
     tajuk_aduan: Attribute.String;
     butiran_lanjut: Attribute.String;
-    documents: Attribute.Media;
+    documents: Attribute.Media<'files', true>;
     negeri: Attribute.String;
     lokasi: Attribute.String;
     no_tel_yang_gagal_dihubungi: Attribute.String;
@@ -841,10 +848,10 @@ export interface ApiBulletinPostBulletinPost extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    TileImage: Attribute.Media;
+    TileImage: Attribute.Media<'images'>;
     Date: Attribute.Date;
     Information: Attribute.Text;
-    PostImages: Attribute.Media;
+    PostImages: Attribute.Media<'images', true>;
     NewsArticleWebsiteLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -879,7 +886,7 @@ export interface ApiHomeScreenMediaLibraryHomeScreenMediaLibrary
   attributes: {
     Title: Attribute.String;
     Subtitle: Attribute.String;
-    Content: Attribute.Media;
+    Content: Attribute.Media<'images' | 'videos'>;
     Link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -912,8 +919,8 @@ export interface ApiLokasiJohorLokasiJohor extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -950,8 +957,8 @@ export interface ApiLokasiKedahLokasiKedah extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -988,8 +995,8 @@ export interface ApiLokasiKelantanLokasiKelantan extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1026,8 +1033,8 @@ export interface ApiLokasiMelakaLokasiMelaka extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1065,8 +1072,8 @@ export interface ApiLokasiNegeriSembilanLokasiNegeriSembilan
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1103,8 +1110,8 @@ export interface ApiLokasiPahangLokasiPahang extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1141,8 +1148,8 @@ export interface ApiLokasiPerakLokasiPerak extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1179,8 +1186,8 @@ export interface ApiLokasiPerlisLokasiPerlis extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1218,8 +1225,8 @@ export interface ApiLokasiPulauPinangLokasiPulauPinang
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1256,8 +1263,8 @@ export interface ApiLokasiSabahLokasiSabah extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1294,8 +1301,8 @@ export interface ApiLokasiSarawakLokasiSarawak extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1332,8 +1339,8 @@ export interface ApiLokasiSelangorLokasiSelangor extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1371,8 +1378,8 @@ export interface ApiLokasiTerengganuLokasiTerengganu
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1410,8 +1417,8 @@ export interface ApiLokasiWpKualaLumpurLokasiWpKualaLumpur
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1448,8 +1455,8 @@ export interface ApiLokasiWpLabuanLokasiWpLabuan extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    BackgroundImage: Attribute.Media;
-    Icon: Attribute.Media;
+    BackgroundImage: Attribute.Media<'images'>;
+    Icon: Attribute.Media<'images'>;
     LocationAddress: Attribute.String;
     PhoneNo: Attribute.String;
     FaxNo: Attribute.String;
@@ -1487,7 +1494,7 @@ export interface ApiPerkhidmatanPerkhidmatan extends Schema.CollectionType {
   attributes: {
     ServiceID: Attribute.String;
     Description: Attribute.Text;
-    ServiceImage: Attribute.Media;
+    ServiceImage: Attribute.Media<'images'>;
     Content: Attribute.DynamicZone<
       [
         'lists.green-tick-list-box',
@@ -1539,10 +1546,10 @@ export interface ApiSorotanPostSorotanPost extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String;
-    TileImage: Attribute.Media;
+    TileImage: Attribute.Media<'images'>;
     Date: Attribute.Date;
     Information: Attribute.Text;
-    PostImages: Attribute.Media;
+    PostImages: Attribute.Media<'images', true>;
     PosterArticleWebsiteLink: Attribute.String;
     PinPost: Attribute.Boolean;
     createdAt: Attribute.DateTime;
