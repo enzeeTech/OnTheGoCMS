@@ -906,6 +906,43 @@ export interface ApiHomeScreenMediaLibraryHomeScreenMediaLibrary
   };
 }
 
+export interface ApiHubungiCollectionHubungiCollection
+  extends Schema.CollectionType {
+  collectionName: 'hubungi_collections';
+  info: {
+    singularName: 'hubungi-collection';
+    pluralName: 'hubungi-collections';
+    displayName: 'HubungiCollection';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    keyword: Attribute.String;
+    Title: Attribute.String;
+    LocationAddress: Attribute.String;
+    PhoneNo: Attribute.String;
+    LocationURL: Attribute.String;
+    OperationTime: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hubungi-collection.hubungi-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hubungi-collection.hubungi-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLokasiJohorLokasiJohor extends Schema.CollectionType {
   collectionName: 'lokasi_johors';
   info: {
@@ -1591,6 +1628,7 @@ declare module '@strapi/types' {
       'api::aduan-form.aduan-form': ApiAduanFormAduanForm;
       'api::bulletin-post.bulletin-post': ApiBulletinPostBulletinPost;
       'api::home-screen-media-library.home-screen-media-library': ApiHomeScreenMediaLibraryHomeScreenMediaLibrary;
+      'api::hubungi-collection.hubungi-collection': ApiHubungiCollectionHubungiCollection;
       'api::lokasi-johor.lokasi-johor': ApiLokasiJohorLokasiJohor;
       'api::lokasi-kedah.lokasi-kedah': ApiLokasiKedahLokasiKedah;
       'api::lokasi-kelantan.lokasi-kelantan': ApiLokasiKelantanLokasiKelantan;

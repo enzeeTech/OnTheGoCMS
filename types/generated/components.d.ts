@@ -1,35 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface TilesPriceTile1 extends Schema.Component {
-  collectionName: 'components_tiles_price_tile1s';
-  info: {
-    displayName: 'PriceTile1';
-  };
-  attributes: {
-    TileData: Attribute.JSON;
-  };
-}
-
-export interface TilesImagePriceTile extends Schema.Component {
-  collectionName: 'components_tiles_image_price_tiles';
-  info: {
-    displayName: 'ImagePriceTile';
-  };
-  attributes: {
-    TileData: Attribute.JSON;
-  };
-}
-
-export interface TilesImageDescTile extends Schema.Component {
-  collectionName: 'components_tiles_image_desc_tiles';
-  info: {
-    displayName: 'ImageDescTile';
-  };
-  attributes: {
-    TileData: Attribute.JSON;
-  };
-}
-
 export interface TicketsSingleTicket extends Schema.Component {
   collectionName: 'components_tickets_single_tickets';
   info: {
@@ -75,6 +45,47 @@ export interface SubsectionsSectionWithImage extends Schema.Component {
   };
 }
 
+export interface LinksLink1 extends Schema.Component {
+  collectionName: 'components_links_link1s';
+  info: {
+    displayName: 'Link1';
+  };
+  attributes: {
+    Title: Attribute.String;
+    URL: Attribute.String;
+  };
+}
+
+export interface TilesPriceTile1 extends Schema.Component {
+  collectionName: 'components_tiles_price_tile1s';
+  info: {
+    displayName: 'PriceTile1';
+  };
+  attributes: {
+    TileData: Attribute.JSON;
+  };
+}
+
+export interface TilesImagePriceTile extends Schema.Component {
+  collectionName: 'components_tiles_image_price_tiles';
+  info: {
+    displayName: 'ImagePriceTile';
+  };
+  attributes: {
+    TileData: Attribute.JSON;
+  };
+}
+
+export interface TilesImageDescTile extends Schema.Component {
+  collectionName: 'components_tiles_image_desc_tiles';
+  info: {
+    displayName: 'ImageDescTile';
+  };
+  attributes: {
+    TileData: Attribute.JSON;
+  };
+}
+
 export interface ListsGreenTickListBox extends Schema.Component {
   collectionName: 'components_lists_green_tick_list_boxes';
   info: {
@@ -96,14 +107,23 @@ export interface ListsBulletPointList extends Schema.Component {
   };
 }
 
-export interface LinksLink1 extends Schema.Component {
-  collectionName: 'components_links_link1s';
+export interface DropdownPlainTextDropdown extends Schema.Component {
+  collectionName: 'components_dropdown_plain_text_dropdowns';
   info: {
-    displayName: 'Link1';
+    displayName: 'PlainTextDropdown';
   };
   attributes: {
-    Title: Attribute.String;
-    URL: Attribute.String;
+    DropdownData: Attribute.JSON;
+  };
+}
+
+export interface DropdownDropdownNormal extends Schema.Component {
+  collectionName: 'components_dropdown_dropdown_normals';
+  info: {
+    displayName: 'DropdownNormal';
+  };
+  attributes: {
+    DropdownData: Attribute.JSON;
   };
 }
 
@@ -141,44 +161,24 @@ export interface GalleryGalleryBasic extends Schema.Component {
   };
 }
 
-export interface DropdownPlainTextDropdown extends Schema.Component {
-  collectionName: 'components_dropdown_plain_text_dropdowns';
-  info: {
-    displayName: 'PlainTextDropdown';
-  };
-  attributes: {
-    DropdownData: Attribute.JSON;
-  };
-}
-
-export interface DropdownDropdownNormal extends Schema.Component {
-  collectionName: 'components_dropdown_dropdown_normals';
-  info: {
-    displayName: 'DropdownNormal';
-  };
-  attributes: {
-    DropdownData: Attribute.JSON;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'tiles.price-tile1': TilesPriceTile1;
-      'tiles.image-price-tile': TilesImagePriceTile;
-      'tiles.image-desc-tile': TilesImageDescTile;
       'tickets.single-ticket': TicketsSingleTicket;
       'tickets.double-ticket': TicketsDoubleTicket;
       'subsections.section': SubsectionsSection;
       'subsections.section-with-image': SubsectionsSectionWithImage;
+      'links.link1': LinksLink1;
+      'tiles.price-tile1': TilesPriceTile1;
+      'tiles.image-price-tile': TilesImagePriceTile;
+      'tiles.image-desc-tile': TilesImageDescTile;
       'lists.green-tick-list-box': ListsGreenTickListBox;
       'lists.bullet-point-list': ListsBulletPointList;
-      'links.link1': LinksLink1;
+      'dropdown.plain-text-dropdown': DropdownPlainTextDropdown;
+      'dropdown.dropdown-normal': DropdownDropdownNormal;
       'gallery.gallery-with-description': GalleryGalleryWithDescription;
       'gallery.gallery-small': GalleryGallerySmall;
       'gallery.gallery-basic': GalleryGalleryBasic;
-      'dropdown.plain-text-dropdown': DropdownPlainTextDropdown;
-      'dropdown.dropdown-normal': DropdownDropdownNormal;
     }
   }
 }
